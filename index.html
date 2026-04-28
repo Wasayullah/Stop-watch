@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Stop-Watch</title>
+</head>
+
+<style>
+    body{
+        background: linear-gradient(135deg, #6B9DF2, #93F0FA);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .main {
+     
+        margin-top: 15%;
+        border: 2px solid black;
+        border-radius: 25px;
+        padding: 20px;
+        width: 30%;
+        text-align: center;
+        box-shadow: 10px 10px 10px black;
+        background: black;
+        overflow: hidden;
+    }
+
+    h2 {
+        color: white;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .time {
+        display: flex;
+        justify-content: center;
+        gap: 1%;
+        align-items: center;
+
+    }
+
+    h1 {
+        background: rgb(10, 163, 69);
+        display: inline-block;
+        width: 100px;
+        padding: 10px 0 10px 0;
+
+        border: 2px solid transparent;
+        border-radius: 5%;
+        font-family: monospace
+    }
+
+    .btns {
+        display: flex;
+        align-items: center;
+        gap: 1%;
+        justify-content: center;
+    }
+
+    .btn {
+        display: inline-block;
+        width: 100px;
+        padding: 10px 0 10px 0;
+        background-color: orangered;
+        color: black;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 14px;
+        font-weight: bolder;
+        line-height: 20px;
+        margin: 3px 5px 3px 5px;
+        border: 2px solid transparent;
+        border-radius: 5%;
+        transition: transform 0.1s;
+    }
+
+    .btn:active {
+        transform: scale(1.09);
+    }
+
+    @media screen and (max-width:480px) {
+        body{
+            background: #6B9DF2;
+        }
+        .main{
+            width: 80%;
+        }
+        h1 {
+
+            padding: 5px 0 5px 0;
+            width: 80px;
+        }
+    }
+    #sec {
+        margin: 0 9px 0 9px;
+    }
+
+    p {
+        color: gray;
+        margin-top: 0;
+        padding: 16px;
+        margin-bottom: 0px;
+        border-radius: 12px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .fa-code:before {
+        content: "\f121";
+    }
+</style>
+
+<body>
+    <div class="main">
+
+        <h2><i class="brand">M-549</i><br> Stop Watch</h2>
+        <div class="time">
+            <h1 id="min">00</h1>
+            <h1 id="sec">00</h1>
+            <h1 id="msec">00</h1>
+        </div>
+        <div class="btns">
+            <div class="btn" id="start" onclick="start()">Start</div>
+            <div class="btn" id="stop" onclick="stop()">Stop</div>
+            <div class="btn" id="reset" onclick="reset()">Reset</div>
+        </div>
+        <p>
+            <small>
+                <i class="fas fa-code"></i> Developer Mohammad wasayullah <br>
+                &copy; All rights reserved 2026
+            </small>
+        </p>
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
